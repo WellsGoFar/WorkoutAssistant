@@ -1,7 +1,7 @@
 # import cv2
 # import os
 
-output_folder = "final/unsorted_images/"
+output_folder = "final/test/raw_images/"
 # # cap = cv2.VideoCapture("final\pushup.mp4")
 
 # cap = cv2.VideoCapture(0)
@@ -41,6 +41,7 @@ def extractFrames(pathIn, pathOut):
     while (cap.isOpened()):
  
         # Capture frame-by-frame
+
         ret, frame = cap.read()
  
         if ret == True:
@@ -49,8 +50,7 @@ def extractFrames(pathIn, pathOut):
             count += 1
         else:
             break
- 
-    # When everything done, release the capture
+
     cap.release()
     cv2.destroyAllWindows()
  
